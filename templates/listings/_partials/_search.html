@@ -1,0 +1,80 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} | Search Results {% endblock %}
+
+{% block content %}
+<!-- Search Section -->
+<section id="showcase-inner" class="showcase-search text-white py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <!-- Search Form Starts -->
+                <form method="get" class="mb-3">
+                    <!-- Preserve existing filters here -->
+                    <!-- Example placeholder for other filters -->
+                    {# Uncomment and customize if needed
+                    <div class="form-group">
+                        <label for="existingFilter">{{ _("Existing Filter") }}</label>
+                        <input type="text" name="existing_filter" id="existingFilter" class="form-control" 
+                               placeholder="{{ _('Existing filter') }}" 
+                               value="{{ request.GET.existing_filter|default:'' }}" onchange="this.form.submit()">
+                    </div>
+                    #}
+                    
+                    <!-- "School Content" filter -->
+                    <div class="form-group mt-3">
+                        <label for="schoolContent">{{ _("School Content") }}</label>
+                        <input type="text" name="school_content" id="schoolContent" class="form-control" 
+                               placeholder="{{ _('Enter school name or keyword') }}" 
+                               value="{{ request.GET.school_content|default:'' }}" onchange="this.form.submit()">
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary">{{ _("Search") }}</button>
+                    </div>
+                </form>
+                <!-- Search Form Ends -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Breadcrumb Navigation -->
+<section id="bc" class="mt-3">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{% url 'index' %}">
+                        <i class="fas fa-home"></i> {{ _("Home") }}
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="{% url 'listings' %}">{{ _("Browse Listings") }}</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">{{ _("Search Results") }}</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- Listings Display -->
+<section id="listings" class="py-4">
+    <div class="container">
+        <div class="row">
+            {% if listings %}
+                {% for listing in listings %}
+                    {% include 'listings/_partials/_listing-box.html' %}
+                {% endfor %}
+            {% else %}
+                <div class="col-md-12">
+                    <p>{{ _("No Listings Available") }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

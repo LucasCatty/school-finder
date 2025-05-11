@@ -1,0 +1,63 @@
+{% load static %}
+{% load i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info for LANGUAGE_CODE as lang %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+<!-- Top Bar -->
+<section id="top-bar" class="p-3">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3">
+        <i class="fas fa-phone"></i> +98(9369295073)
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-envelope-open"></i> nimadorostkar97@gmail.com
+      </div>
+
+      <div class="col-md-3">
+        <div class="social text-right">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="text-right">
+          {% for language in languages %}
+            {% if language.code != 'de' %}
+              <a href="#{{ language.code }}" onclick="set_language('{{ language.code }}')" title="{{ language.name_local }}">
+                <span class="flag-icon {% if language.code == 'en' %}flag-icon-gb{% elif language.code == 'rw' %}flag-icon-rw{% else %}flag-icon-{{ language.code }}{% endif %}"></span>
+              </a>
+            {% endif %}
+          {% endfor %}
+
+          <form action="{% url 'set_language' %}" method="post" id="setlang">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.path }}">
+            <input type="hidden" name="language" id="language">
+          </form>
+
+          <script>
+            if (window.location.hash) {
+              const hash = window.location.hash.replace('#', '');
+              document.getElementById('language').value = hash;
+              document.getElementById('setlang').submit();
+            }
+
+            function set_language(language) {
+              document.getElementById('language').value = language;
+              document.getElementById('setlang').submit();
+            }
+          </script>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

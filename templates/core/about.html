@@ -1,0 +1,119 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'core/partials/_showcase_section.html' %}
+
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{% url 'index' %}">
+            <i class="fas fa-home"></i>{{ _("Home") }} </a>
+        </li>
+        <li class="breadcrumb-item active">{{ _("Contact & Partnership") }}</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<!-- Contact & Partnership Section -->
+<section id="about" class="py-4">
+  <div class="container">
+    <div class="row">
+      <!-- Our Contact -->
+      <div class="col-md-9">
+        <h2 class="pb-3">{{ _("Our Contact") }}</h2>
+        <img src="{% static 'img/contact.jpg' %}" alt="">
+        <p class="mt-4">
+          {{ _("Feel free to reach out to us for any inquiries or partnerships. We are committed to facilitating investments and collaborations with Rwanda investors.") }}
+        </p>
+        <h4 class="mt-4">{{ _("Contact Details") }}</h4>
+        <ul>
+          <li><strong>{{ _("Address") }}:</strong> Kigali, Rwanda</li>
+          <li><strong>{{ _("Phone") }}:</strong> +250 78 123 4567</li>
+          <li><strong>{{ _("Email") }}:</strong> info@yourcompany.rw</li>
+        </ul>
+      </div>
+      
+      <!-- Our Partnership with Rwanda Investors -->
+      <div class="col-md-3">
+        <div>
+          <h3 class="pb-2">{{ _("Our Partnership with Rwanda Investors") }}</h3>
+          <img class="square-pic pb-3" src="{% static 'img/rw.png' %}" alt="{{ _("Partnership") }}">
+          <p>
+            {{ _("We are proud to collaborate with Rwanda's top investors, including the Rwanda Education Board (REB) and the Higher Education Council (HEC), to promote sustainable development and economic growth. Join us in shaping Rwanda's future!") }}
+          </p>
+        </div>
+        <hr>
+        <div>
+          <style>
+            #investorsBadgeContainer {
+              background: url("{% static 'img/rwanda_investors_badge.jpg' %}") no-repeat;
+              background-size: 100%;
+              width: 200px;
+              height: 200px;
+              position: relative;
+            }
+            /* Optional: Add responsiveness or hover effects if desired */
+          </style>
+          
+          <!-- Logos and links for REB and HEC -->
+          <h4>{{ _("Our Key Rwanda Investors") }}</h4>
+          <div class="d-flex flex-column align-items-center">
+            <!-- REB Logo and Link -->
+            <a href="https://reb.rw" target="_blank" class="mb-3 text-center">
+              <img src="{% static 'img/REB_logo.PNG' %}" alt="REB Logo" style="width:150px; height:auto;">
+              <p class="mt-2">{{ _("Rwanda Education Board (REB)") }}</p>
+            </a>
+            <!-- HEC Logo and Link -->
+            <a href="https://hec.gov.rw" target="_blank" class="mb-3 text-center">
+              <img src="{% static 'img/HEC_logo.PNG' %}" alt="HEC Logo" style="width:150px; height:auto;">
+              <p class="mt-2">{{ _("Higher Education Council (HEC)") }}</p>
+            </a>
+          </div>
+          
+          <!-- Badge container if needed -->
+          <a href="#" target="_blank" class="d-block text-center mt-3">
+            <div id="investorsBadgeContainer" title="{{ _("Rwanda Investors Badge") }}"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Work -->
+<section id="work" class="bg-dark text-white text-center">
+  <h2 class="display-4 pb-3">{{ _("We Work For You") }}</h2>
+  <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg">{{ _("View Our Featured Listings") }}</a>
+</section>
+
+{% if realtors %}
+<!-- Team -->
+<section id="team" class="py-5">
+  <div class="container">
+    <h2 class="text-center pb-5">{{ _("Our Team") }}</h2>
+    <div class="row text-center">
+      {% for realtor in realtors %}
+      <div class="{% if realtors.count > 2 %} col-md-4 {% else %} col-md-6 {% endif %}">
+        <img src="{{ realtor.photo.url }}" alt="{{ realtor.name }}" class="rounded-circle-5 mb-3">
+        <h4>{{ realtor.name }}</h4>
+        <p class="text-success">
+          <i class="fas fa-award text-success mb-3"></i> {{ _("Realtor") }}</p>
+        <hr>
+        <p>
+          <i class="fas fa-phone"></i> {{ realtor.phone }}</p>
+        <p>
+          <i class="fas fa-envelope-open"></i> {{ realtor.email }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

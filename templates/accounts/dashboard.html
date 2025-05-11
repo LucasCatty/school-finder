@@ -1,0 +1,121 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load filters %}
+
+{% block extrastyle %}
+<meta name="description" content="School Finder Dashboard — Manage your inquiries, documents, and conversations with schools across the country."/>
+<style>
+  .school-theme {
+    background-color: #f0f4ff;
+    border-left: 5px solid #007bff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .btn-school {
+    background-color: #007bff;
+    color: white;
+  }
+  .btn-school-outline {
+    border: 1px solid #007bff;
+    color: #007bff;
+  }
+  .btn-school-outline:hover {
+    background-color: #007bff;
+    color: white;
+  }
+</style>
+{% endblock %}
+
+{% block title %} | School Finder Dashboard {% endblock %}
+
+{% block content %}
+<section id="showcase-inner" class="py-5 showcase-text" {style="background: url({% static 'images/school-banner.jpg' %}) no-repeat center center/cover"}>
+  <div class="container bg-blur text-white">
+    <div class="row">
+      <div class="col-md-12 my-5 text-center">
+        <h1 class="display-4 my-4">{{ _("Welcome to School Finder") }}</h1>
+        <p class="lead">{{ _("Discover and manage schools you've contacted or inquired about") }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{% url 'index' %}">
+            <i class="fas fa-home"></i> {{ _("Home") }}</a>
+        </li>
+        <li class="breadcrumb-item active">{{ _("Dashboard") }}</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<!-- Alerts -->
+{% include 'core/partials/_alerts.html' %}
+
+<section id="dashboard" class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">{{ _("Hello") }} {{ user.first_name }} 👋</h2>
+        <div class="school-theme mb-4">
+          <p class="mb-0">{{ _("Below are the schools you’ve expressed interest in. You can view their profiles, download brochures, or continue your conversations.") }}</p>
+        </div>
+
+        {% if contacts %}
+        <table class="table table-hover">
+          <thead class="thead-light">
+            <tr>
+              <th>{{ _("School Name") }}</th>
+              <th>{{ _("Inquiry Date") }}</th>
+              <th>{{ _("Actions") }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for contact in contacts %}
+            <tr>
+              <td>{{ contact.listing }}</td>
+              <td>{{ contact.contact_date|date:"d M Y" }}</td>
+              <td>
+                <div class="row col-12 px-0">
+                  <div class="col-12 col-md-6 col-lg-4 mb-1">
+                    {% if contact.can_access_documents %}
+                    <a class="btn btn-school btn-block" href="{% url 'documents' contact.listing.id %}">
+                      <i class="fas fa-file-alt"></i>
+                      {{ _("Brochure") }}
+                      ({{ contact.listing.id|get_nr_docs }})</a>
+                    {% endif %}
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-1">
+                    <a class="btn btn-school-outline btn-block" href="{% url 'listing' contact.listing_id %}">
+                      <i class="fas fa-school"></i>
+                      {{ _("School Profile") }}
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-1">
+                    {% if contact.chatmessage_set.all.count > 0 %}
+                    <a class="btn btn-secondary btn-block" href="{% url 'chat-history' contact.id %}">
+                      <i class="fas fa-comments"></i>
+                      {{ _("Messages") }}
+                    </a>
+                    {% endif %}
+                  </div>
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <p class="text-muted">{{ _("You have not made any school inquiries yet.") }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

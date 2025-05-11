@@ -1,0 +1,1008 @@
+Ndumva, urifuza ko mpindura iyi `.po` file mu Kinyarwanda. Nzakora impinduka zikwiye ku msgstr zose zitarimo ubusanzwe. Dore uko byaba mu Kinyarwanda:
+
+---"Language: rw\n"
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-10 18:29+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: rw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\accounts\forms.py:21 .\accounts\models.py:45
+#: .\templates\accounts\auth\register.html:24
+msgid "Firstname"
+msgstr "Izina rya mbere"
+
+#: .\accounts\forms.py:26 .\accounts\models.py:47
+msgid "Lastname"
+msgstr "Izina rya nyuma"
+
+#: .\accounts\forms.py:31 .\accounts\models.py:54 .\contacts\models.py:34
+#: .\templates\accounts\auth\login.html:24
+#: .\templates\accounts\auth\register.html:32
+msgid "Email"
+msgstr "Email"
+
+#: .\accounts\forms.py:36 .\accounts\models.py:50 .\accounts\models.py:80
+#: .\contacts\models.py:15
+msgid "Phone"
+msgstr "Telefone"
+
+#: .\accounts\models.py:20
+msgid "The Email must be set"
+msgstr "Email igomba gushyirwaho"
+
+#: .\accounts\models.py:36
+msgid "Superuser must have is_staff=True."
+msgstr "Umukoresha mukuru agomba kugira is_staff=True."
+
+#: .\accounts\models.py:38
+msgid "Superuser must have is_superuser=True."
+msgstr "Umukoresha mukuru agomba kugira is_superuser=True."
+
+#: .\accounts\models.py:53 .\listings\models.py:52 .\listings\models.py:95
+#: .\templates\accounts\_partials\profile-navbar.html:6
+#: .\templates\accounts\address.html:21 .\templates\accounts\address.html:37
+msgid "Address"
+msgstr "Aderesi"
+
+#: .\accounts\models.py:69
+msgid "Groups"
+msgstr "Amatsinda"
+
+#: .\accounts\models.py:77
+msgid "Photo"
+msgstr "Ifoto"
+
+#: .\accounts\models.py:79 .\listings\models.py:54
+#: .\templates\listings\listing.html:94
+msgid "Description"
+msgstr "Ibisobanuro"
+
+#: .\accounts\models.py:84
+msgid "Hire date"
+msgstr "Itariki yo gufata akazi"
+
+#: .\accounts\models.py:90 .\listings\models.py:48
+#: .\templates\core\about.html:97
+msgid "Realtor"
+msgstr "Ushinzwe kugurisha inzu"
+
+#: .\accounts\models.py:91
+msgid "Realtors"
+msgstr "Abaguzi b'inzu"
+
+#: .\accounts\views.py:29 .\templates\core\partials\_navbar.html:54
+msgid "Register"
+msgstr "Kwiyandikisha"
+
+#: .\accounts\views.py:30
+msgid "Register Account"
+msgstr "Kwiyandikisha ku rubuga"
+
+#: .\accounts\views.py:31
+msgid "Real estate manager. This is the regitration page."
+msgstr "Ubuyobozi bw'imitungo y'inzu. Iki ni ipaji yo kwiyandikisha."
+
+#: .\accounts\views.py:47
+msgid "That email is being used"
+msgstr "Iyo email iracyakoreshwa"
+
+#: .\accounts\views.py:56
+msgid "You are now registered and can log in"
+msgstr "Ubu wamaze kwiyandikisha kandi ushobora kwinjira"
+
+#: .\accounts\views.py:59
+msgid "Passwords do not match"
+msgstr "Password ntizihura"
+
+#: .\accounts\views.py:68
+#: .\templates\accounts\auth\password_reset_complete.html:22
+#: .\templates\core\partials\_navbar.html:59
+msgid "Login"
+msgstr "Injira"
+
+#: .\accounts\views.py:69
+msgid "Account Login"
+msgstr "Kwinjira ku rukuta"
+
+#: .\accounts\views.py:70
+msgid "Real estate manager. This is the login page."
+msgstr "Ubuyobozi bw'imitungo y'inzu. Iki ni ipaji yo kwinjira."
+
+#: .\accounts\views.py:79
+msgid "You are now logged in"
+msgstr "Uinjiyemo neza"
+
+#: .\accounts\views.py:82
+msgid "Invalid credentials"
+msgstr "Amakuru yinjira atariyo"
+
+#: .\accounts\views.py:92
+msgid "You are now logged out"
+msgstr "Uliciye neza"
+
+#: .\accounts\views.py:125
+msgid "Reset Password"
+msgstr "Subiza ijambo banga"
+
+#: .\accounts\views.py:126
+msgid "Password reset request"
+msgstr "Gusaba gusubiza ijambo banga"
+
+#: .\accounts\views.py:127
+msgid "Real estate manager. This is the password reset request page."
+msgstr "Ubuyobozi bw'imitungo y'inzu. Iki ni ipaji yo gusaba gusubiza ijambo banga."
+
+#: .\accounts\views.py:138
+msgid "Profile updated successfully!"
+msgstr "Profil yashyizweho neza!"
+
+#: .\accounts\views.py:145 .\templates\snippets\profile.html:13
+msgid "Manage Account"
+msgstr "Gucunga Konti"
+
+#: .\accounts\views.py:146 .\templates\accounts\dashboard.html:19
+#: .\templates\snippets\profile.html:14
+msgid "Manage your Real-Estate account"
+msgstr "Gucunga konti y'imitungo y'inzu yawe"
+
+#: .\accounts\views.py:148 .\core\views.py:88 .\core\views.py:91
+#: .\templates\core\impressum.html:22
+#: .\templates\core\partials\_footer.html:11
+#: .\templates\snippets\_footer.html:11
+msgid "Impressum"
+msgstr "Imena"
+
+#: .\accounts\views.py:149 .\core\views.py:92
+msgid "Real estate manager.This is our impressum page."
+msgstr "Ubuyobozi bw'imitungo y'inzu. Iki ni ipaji yacu y'ibimenyetso byo kwemeza."
+
+#: .\contacts\models.py:12 .\documents\models.py:9 .\documents\models.py:28
+#: .\listings\models.py:140 .\listings\models.py:165
+#: .\templates\accounts\dashboard.html:83
+msgid "Listing"
+msgstr "Itangazo"
+
+#: .\contacts\models.py:14 .\contacts\models.py:42
+msgid "User"
+msgstr "Umukoresha"
+
+#: .\contacts\models.py:16
+#: .\templates\contacts\_partials\_user_contact_form.html:9
+msgid "Message"
+msgstr "Ubutumwa"
+
+#: .\contacts\models.py:18
+msgid "Contact date"
+msgstr "Itariki yo kuvugana"
+
+#: .\contacts\models.py:20
+msgid "Docs access"
+msgstr "Uburenganzira bwo kubona inyandiko"
+
+#: .\contacts\models.py:30
+msgid "Client"
+msgstr "Umukiriya"
+
+#: .\contacts\models.py:40
+msgid "Contact listing"
+msgstr "Urutonde rwo kuvugana"
+
+#: .\contacts\models.py:45
+msgid "Date and iime"
+msgstr "Itariki n'amasaha"
+
+#: .\contacts\views.py:27 .\contacts\views.py:68
+msgid "You have already made an inquiry for this listing"
+msgstr "Imwe mu nyandiko umaze gukora ku itangazo"
+
+#: .\contacts\views.py:46 .\contacts\views.py:87
+msgid "Your request has been submitted, a realtor will get back to you soon"
+msgstr "Icyifuzo cyawe cyoherejwe, umucuruzi azakugaruka vuba"
+
+#: .\contacts\views.py:105
+msgid ""
+"Your request has been submitted, a realtor will '                         "
+"'get back to you soon"
+msgstr "Icyifuzo cyawe cyoherejwe, umucuruzi azakugaruka vuba."
+
+#: .\contacts\views.py:117 .\contacts\views.py:120
+msgid "Message History"
+msgstr "Amakuru y'ubutumwa"
+
+#: .\contacts\views.py:121
+msgid ""
+"Real estate manager.Here you can follow your message history, related to a "
+"specific listing you are interested in.."
+msgstr "Ubuyobozi bw'imitungo y'inzu. Hano wakurikira amateka y'ubutumwa bwawe, ku itangazo runaka ukeneye."
+
+#: .\core\forms.py:21 .\core\models.py:49
+msgid "Street"
+msgstr "Umuhanda"
+
+#: .\core\forms.py:26
+msgid "House Number"
+msgstr "Nomero y'inzu"
+
+#: .\core\forms.py:30 .\core\models.py:53
+msgid "Zipcode"
+msgstr "Kodeshi"
+
+#: .\core\forms.py:35 .\core\models.py:55
+#: .\templates\core\partials\_search.html:23
+#: .\templates\core\partials\_search.html:30
+msgid "City"
+msgstr "Umujyi"
+
+#: .\core\libs\core_libs.py:13 .\core\libs\core_libs.py:22
+msgid "No Image Found"
+msgstr "Nta Foto yabonetse"
+
+#: .\core\models.py:14 .\core\models.py:30 .\core\models.py:32
+msgid "Country"
+msgstr "Igihugu"
+
+#: .\core\models.py:15
+msgid "Countries"
+msgstr "Ibihugu"
+
+#: .\core\models.py:38 .\core\models.py:58
+#: .\templates\core\partials\_search.html:37
+#: .\templates\snippets\snippets.html:18
+msgid "State"
+msgstr "Intara"
+
+#: .\core\models.py:39
+msgid "States"
+msgstr "Intara"
+
+#: .\core\models.py:51
+msgid "House number"
+msgstr "Nomero y'inzu"
+
+#: .\core\models.py:63
+msgid "Addresses"
+msgstr "Aderesi"
+
+#: .\core\views.py:39
+msgid "Real estate manager. Renting, buying and selling."
+msgstr "Ubuyobozi bw'imitungo y'inzu. Gukodesha, kugura no kugurisha."
+
+#: .\core\views.py:41
+msgid ""
+"Real estate manager. We offer real estate objects and takes care of every "
+"aspect for you. Services offered: renting, selling, buying, consultation and "
+"way more."
+msgstr ""
+"Ubuyobozi bw'imitungo y'inzu. Dutanga ibijyanye n'imitungo y'inzu kandi tukita ku bintu byose. Serivisi zacu zirimo: gukodesha, kugurisha, kugura, inama n'ibindi byinshi."
+
+#: .\core\views.py:56
+msgid "About us"
+msgstr "Ibyerekeye twe"
+
+#: .\core\views.py:57
+msgid "Real Estate and Consulting"
+msgstr "Imitungo n'Inama"
+
+#: .\core\views.py:59 .\templates\core\partials\_navbar.html:17
+msgid "About Us"
+msgstr "Ibyerekeye"
+
+#: .\core\views.py:60
+msgid ""
+"Real estate manager.Our services include renting, selling, buying, "
+"consulting and much more."
+msgstr ""
+"Ubuyobozi bw'imitungo y'inzu. Serivisi zacu zirimo gukodesha, kugurisha, kugura, inama n'ibindi byinshi."
+
+#: .\core\views.py:73 .\core\views.py:76
+#: .\templates\core\partials\_footer.html:14 .\templates\core\privacy.html:22
+#: .\templates\snippets\_footer.html:14
+msgid "Privacy"
+msgstr "Ubwirinzi bw'amabanga"
+
+#: .\core\views.py:74 .\core\views.py:89
+msgid "Real-Estate"
+msgstr "Imitungo"
+
+#: .\core\views.py:77
+msgid "Real estate manager.This is our privacy page."
+msgstr "Ubuyobozi bw'imitungo y'inzu. Iki ni ipaji yacu y'ubwirinzi bw'amabanga."
+
+#: .\documents\models.py:11
+msgid "Name"
+msgstr "Izina"
+
+#: .\documents\models.py:13 .\listings\models.py:145
+msgid "Short description"
+msgstr "Ibisobanuro bigufi"
+
+#: .\documents\models.py:15
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:244
+msgid "File"
+msgstr "Idosiye"
+
+#: .\documents\models.py:17 .\listings\models.py:75 .\listings\models.py:147
+msgid "Created"
+msgstr "Yashyizweho"
+
+#: .\documents\models.py:19 .\listings\models.py:77
+msgid "Updated"
+msgstr "Hinduwe"
+
+#: .\documents\models.py:21
+msgid "For customers"
+msgstr "Ku bakiriya"
+
+#: .\documents\views.py:18 .\documents\views.py:39
+#: .\templates\accounts\_partials\profile-navbar.html:9
+#: .\templates\documents\documents.html:34
+#: .\templates\documents\user-documents.html:36
+msgid "Documents"
+msgstr "Inyandiko"
+
+#: .\documents\views.py:19
+msgid "Manage your own documents"
+msgstr "Gucunga inyandiko zawe bwite"
+
+#: .\documents\views.py:21
+msgid "User documents"
+msgstr "Inyandiko z'umukoresha"
+
+#: .\documents\views.py:22
+msgid "Real estate manager.Here you can upload and manage your own documents"
+msgstr "Ubuyobozi bw'imitungo y'inzu. Hano ushobora kwinjiza no gucunga inyandiko zawe bwite."
+
+#: .\documents\views.py:40
+msgid ""
+"Real estate manager.Here you can manage your documents, related to a "
+"specific object you are interested in."
+msgstr ""
+"Ubuyobozi bw'imitungo y'inzu. Hano ushobora gucunga inyandiko zikurikira ikintu runaka ukeneye."
+
+#: .\env\Lib\site-packages\django\contrib\messages\apps.py:16
+msgid "Messages"
+msgstr "Ubutumwa"
+
+#: .\env\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+msgid "Site Maps"
+msgstr "Amakarita y'urubuga"
+
+#: .\env\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr "Amadosiye atagira impinduka"
+
+#: .\env\Lib\site-packages\django\contrib\syndication\apps.py:7
+msgid "Syndication"
+msgstr "Gukwirakwiza"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:30
+msgid "…"
+msgstr "…"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:32
+msgid "That page number is not an integer"
+msgstr "Iyo nomero y'urupapuro si numero"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:33
+msgid "That page number is less than 1"
+msgstr "Iyo nomero y'urupapuro iruta 0"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:34
+msgid "That page contains no results"
+msgstr "Uru rupapuro nta bisubizo biriho"
+
+#: .\env\Lib\site-packages\django\core\validators.py:22
+msgid "Enter a valid value."
+msgstr "Injiza agaciro karimo ukuri."
+
+#: .\env\Lib\site-packages\django\core\validators.py:70
+msgid "Enter a valid domain name."
+msgstr "Injiza izina ry'urubuga rikurikije amategeko."
+
+#: .\env\Lib\site-packages\django\core\validators.py:153
+#: .\env\Lib\site-packages\django\forms\fields.py:775
+msgid "Enter a valid URL."
+msgstr "Injiza URL yizewe."
+
+#: .\env\Lib\site-packages\django\core\validators.py:200
+msgid "Enter a valid integer."
+msgstr "Injiza numero y'ukuri."
+
+#: .\env\Lib\site-packages\django\core\validators.py:211
+msgid "Enter a valid email address."
+msgstr "Injiza aderesi y'iposita yizewe."
+
+#: .\env\Lib\site-packages\django\core\validators.py:289
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr "Injiza “slug” yemewe ikubiyemo inyuguti, imibare, amazina y'ibimenyetso cyangwa ihuriro."
+
+#: .\env\Lib\site-packages\django\core\validators.py:297
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr "Injiza “slug” yemewe ikubiyemo inyuguti za Unicode, imibare, amazina y'ibimenyetso cyangwa ihuriro."
+
+#: .\env\Lib\site-packages\django\core\validators.py:309
+#: .\env\Lib\site-packages\django\core\validators.py:318
+#: .\env\Lib\site-packages\django\core\validators.py:332
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2220
+#, python-format
+msgid "Enter a valid %(protocol)s address."
+msgstr "Injiza aderesi yemewe ya %(protocol)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:311
+msgid "IPv4"
+msgstr "IPv4"
+
+#: .\env\Lib\site-packages\django\core\validators.py:320
+#: .\env\Lib\site-packages\django\utils\ipv6.py:43
+msgid "IPv6"
+msgstr "IPv6"
+
+#: .\env\Lib\site-packages\django\core\validators.py:334
+msgid "IPv4 or IPv6"
+msgstr "IPv4 cyangwa IPv6"
+
+#: .\env\Lib\site-packages\django\core\validators.py:375
+msgid "Enter only digits separated by commas."
+msgstr "Injiza imibare yonyine, ihanzweho na koma."
+
+#: .\env\Lib\site-packages\django\core\validators.py:381
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr "Haguruka agaciro ka %(limit_value)s (kuri %(show_value)s)."
+
+#: .\env\Lib\site-packages\django\core\validators.py:416
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "Haguruka agaciro kari munsi cyangwa kangana na %(limit_value)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:425
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "Haguruka agaciro kari hejuru cyangwa kangana na %(limit_value)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:434
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr "Haguruka agaciro kari mu kigereranyo cya step size %(limit_value)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:441
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+"Haguruka agaciro kari mu kigereranyo cya step size %(limit_value)s, uhereye kuri "
+"%(offset)s, urugero %(offset)s, %(valid_value1)s, %(valid_value2)s, n'ibindi."
+
+#: .\env\Lib\site-packages\django\core\validators.py:473
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Haguruka agaciro k'ibura inyuguti %(limit_value)d (cyangwa %(show_value)d)."
+msgstr[0] "Haguruka byibuze inyuguti %(limit_value)d (cyangwa %(show_value)d)."
+msgstr[1] "Haguruka byibuze inyuguti %(limit_value)d (cyangwa %(show_value)d)."
+
+#: .\env\Lib\site-packages\django\core\validators.py:491
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Haguruka agaciro k'ibikurikira %(limit_value)d inyuguti (cyangwa %(show_value)d)."
+msgstr[0] "Haguruka agaciro k'ibikurikira %(limit_value)d inyuguti (cyangwa %(show_value)d)."
+msgstr[1] "Haguruka agaciro k'ibikurikira %(limit_value)d inyuguti (cyangwa %(show_value)d)."
+
+#: .\env\Lib\site-packages\django\core\validators.py:514
+#, python-format
+msgid "Enter a number."
+msgstr "Injiza umubare."
+
+#: .\env\Lib\site-packages\django\core\validators.py:516
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgstr "Haguruka ko nta mubare urenze %(max)s mu mubare wose."
+
+#: .\env\Lib\site-packages\django\core\validators.py:521
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgstr "Haguruka ko nta mibare y'ibinyomoro irenze %(max)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:526
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgstr "Haguruka ko nta mibare nyinshi mbere ya decimal irenze %(max)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:597
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr "Ubwoko bwa dosiye “%(extension)s” ntibwemerewe. Ibwemererwa ni: %(allowed_extensions)s."
+
+#: .\env\Lib\site-packages\django\core\validators.py:659
+msgid "Null characters are not allowed."
+msgstr "Inyuguti z'ubusa ntibwemerewe."
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1600
+#: .\env\Lib\site-packages\django\forms\models.py:908
+msgid "and"
+msgstr "n'"
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1602
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr "%(model_name)s ifite %(field_labels)s kandi iboneka."
+
+#: .\env\Lib\site-packages\django\db\models\constraints.py:22
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr "Ingingo “%(name)s” irarengeweho."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:134
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr "Agaciro %(value)r si ko guhitamo kwemewe."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:135
+msgid "This field cannot be null."
+msgstr "Iki kibuga ntikigomba kuba null."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:136
+msgid "This field cannot be blank."
+msgstr "Iki kibuga ntikigomba kuba ubusa."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:137
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr "%(model_name)s ifite %(field_label)s kandi ikaba ihari."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:141
+#, python-format
+msgid "%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr "%(field_label)s igomba kuba yihariye kuri %(date_field_label)s %(lookup_type)s."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:180
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr "Ubwoko bw'ikibuga: %(field_type)s"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1162
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr "Agaciro “%(value)s” agomba kuba True cyangwa False."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1163
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr "Agaciro “%(value)s” agomba kuba True, False cyangwa None."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1165
+msgid "Boolean (Either True or False)"
+msgstr "Ubwoko bwa boolean (True cyangwa False)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1215
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr "Inyandiko (y'uburebure bwa %(max_length)s)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1217
+msgid "String (unlimited)"
+msgstr "Inyandiko idafite umupaka"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1326
+msgid "Comma-separated integers"
+msgstr "Imibare yanditse ikurikiranye na koma"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1427
+#, python-format
+msgid "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD format."
+msgstr "Agaciro “%(value)s” gafite uburyo butari bwo bwo kwandika itariki. Bugomba kuba mu buryo bwa YYYY-MM-DD."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1431
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1566
+#, python-format
+msgid "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid date."
+msgstr "Agaciro “%(value)s” gafite uburyo bukwiye (YYYY-MM-DD), ariko si itariki yemewe."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1435
+msgid "Date (without time)"
+msgstr "Itariki (ubusa igihe)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1562
+#, python-format
+msgid "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format."
+msgstr "Agaciro “%(value)s” gafite uburyo butari bwo bwo kwandika. Bugomba kuba mu buryo bwa YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1570
+#, python-format
+msgid "“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
+msgstr "Agaciro “%(value)s” gafite uburyo bukwiye (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]), ariko si igihe cyangwa itariki yemewe."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1575
+msgid "Date (with time)"
+msgstr "Itariki (hamwe n'amasaha)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1702
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr "Agaciro “%(value)s” agomba kuba ari nomero y'ikinyuranyo."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1704
+msgid "Decimal number"
+msgstr "Nomero y'ikinyuranyo"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1864
+#, python-format
+msgid "“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[.uuuuuu] format."
+msgstr "Agaciro “%(value)s” gafite uburyo butari bwo bwo kwandika. Bugomba kuba mu buryo bwa [TT] [[HH:]MM:]ss[.uuuuuu]."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1868
+msgid "Duration"
+msgstr "Igihe kirekire"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1920
+msgid "Email address"
+msgstr "Aderesi y'iposita"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1945
+msgid "File path"
+msgstr "Inzira y'inyandiko"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2023
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr "Agaciro “%(value)s” agomba kuba ari decimal."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2025
+msgid "Floating point number"
+msgstr "Numero y'ibinyuranyo"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2065
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr "Agaciro “%(value)s” agomba kuba ari numero y'ukuri."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2067
+msgid "Integer"
+msgstr "Numero y'ukuri"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2163
+msgid "Big (8 byte) integer"
+msgstr "Numero nini (8 byte)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2180
+msgid "Small integer"
+msgstr "Numero ntoya"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2188
+msgid "IPv4 address"
+msgstr "Aderesi ya IPv4"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2219
+msgid "IP address"
+msgstr "Aderesi ya IP"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2310
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2311
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr "Agaciro “%(value)s” agomba kuba None, True cyangwa False."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2313
+msgid "Boolean (Either True, False or None)"
+msgstr "Ubwoko bwa boolean (True, False cyangwa None)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2364
+msgid "Positive big integer"
+msgstr "Numero nini z'ibinyuranyo bizaba byiza"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2379
+msgid "Positive integer"
+msgstr "Numero nziza"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2394
+msgid "Positive small integer"
+msgstr "Numero ntoya nziza"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2410
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr "Slug (bifite max %(max_length)s)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2446
+msgid "Text"
+msgstr "Inyandiko"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2526
+#, python-format
+msgid "“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] format."
+msgstr "Agaciro “%(value)s” gafite uburyo butari bwo bwo kwandika. Bugomba kuba mu buryo bwa HH:MM[:ss[.uuuuuu]]."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2530
+#, python-format
+msgid "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an invalid time."
+msgstr "Agaciro “%(value)s” gafite uburyo bukwiye (HH:MM[:ss[.uuuuuu]]), ariko si igihe nyacyo."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2534
+msgid "Time"
+msgstr "Igihe"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2642
+msgid "URL"
+msgstr "URL"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2666
+msgid "Raw binary data"
+msgstr "Ibigize binary bitagira umupaka"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2731
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr "“%(value)s” si UUID yemewe."
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2733
+msgid "Universally unique identifier"
+msgstr "UUID yihariye ku isi yose"
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:420
+#: .\listings\models.py:66 .\listings\models.py:112 .\listings\models.py:143
+#: .\listings\models.py:155
+msgid "Image"
+msgstr "Ifoto"
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:24
+msgid "A JSON object"
+msgstr "JSON object"
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:26
+msgid "Value must be valid JSON."
+msgstr "Agaciro kigomba kuba ari JSON yemewe."
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:978
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
+msgstr "%(model)s ifite %(field)s %(value)r si iyemewe."
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:981
+msgid "Foreign Key (type determined by related field)"
+msgstr "Urufunguzo ruremere (ubwoko bwarwo bigenwa na related field)"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1275
+msgid "One-to-one relationship"
+msgstr "Uburyo bwo guhuza bumwe"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1332
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr "%(from)s-%(to)s ihuriro"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1334
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr "%(from)s-%(to)s imibanire"
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1382
+msgid "Many-to-many relationship"
+msgstr "Uburyo bwinshi-bwinshi bwo guhuza"
+
+#: .\env\Lib\site-packages\django\forms\boundfield.py:185
+msgid ":?.!"
+msgstr ":?.!"
+
+#: .\env\Lib\site-packages\django\forms\fields.py:95
+msgid "This field is required."
+msgstr "Iki kibuga kirakenewe."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:315
+msgid "Enter a whole number."
+msgstr "Injiza umubare wuzuye."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:486
+#: .\env\Lib\site-packages\django\forms\fields.py:1267
+msgid "Enter a valid date."
+msgstr "Injiza itariki yizewe."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:509
+#: .\env\Lib\site-packages\django\forms\fields.py:1268
+msgid "Enter a valid time."
+msgstr "Injiza igihe nyacyo."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:536
+msgid "Enter a valid date/time."
+msgstr "Injiza itariki n'amasaha yizewe."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:570
+msgid "Enter a valid duration."
+msgstr "Injiza igihe gikwiye."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:571
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr "Umubare w'iminsi ugomba hagati ya {min_days} na {max_days}."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:640
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr "Nta dosiye yoherejwe. Reba ubwoko bwa encoding ku ifishi."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:641
+msgid "No file was submitted."
+msgstr "Nta dosiye yoherejwe."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:642
+msgid "The submitted file is empty."
+msgstr "Dosiye yoherejwe ni ubusa."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:644
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgstr "Hagarika izina rya dosiye rifite inyuguti zigera kuri %(max)d (rifite %(length)d)."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:649
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr "Nyamuneka, hitamo kohereza dosiye imwe cyangwa guhitamo gusiba, si byombi."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:717
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+"Shyiramo ishusho yemewe. Dosiye ushyizeho si ishusho cyangwa irashaje."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:889
+#: .\env\Lib\site-packages\django\forms\fields.py:975
+#: .\env\Lib\site-packages\django\forms\models.py:1592
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "Hitamo ikintu kiboneye. %(value)s si kimwe mu byemewe."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:977
+#: .\env\Lib\site-packages\django\forms\fields.py:1096
+#: .\env\Lib\site-packages\django\forms\models.py:1590
+msgid "Enter a list of values."
+msgstr "Injiza urutonde rw'agaciro."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1097
+msgid "Enter a complete value."
+msgstr "Injiza agaciro karangiye."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1339
+msgid "Enter a valid UUID."
+msgstr "Injiza UUID yizewe."
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1369
+msgid "Enter a valid JSON."
+msgstr "Injiza JSON yizewe."
+
+#: .\env\Lib\site-packages\django\forms\forms.py:97
+msgid ":"
+msgstr ":"
+
+#: .\env\Lib\site-packages\django\forms\forms.py:239
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr "(Ikibuga kibitswe %(name)s) %(error)s"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+"Amakuru ya ManagementForm yaburiweho cyangwa yashyizweho nabi. Ibibura: %(field_names)s. "
+"Shobora gusaba gutanga raporo y'ikosa niba kibiriho."
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] "Nyamuneka, ohereza byibuze %(num)d ifishi."
+msgstr[1] "Nyamuneka, ohereza byibuze %(num)d amasomo."
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] "Nyamuneka, ohereza byibuze %(num)d ifishi."
+msgstr[1] "Nyamuneka, ohereza byibuze %(num)d amasomo."
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:484
+#: .\env\Lib\site-packages\django\forms\formsets.py:491
+msgid "Order"
+msgstr "Urutonde"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:499
+msgid "Delete"
+msgstr "Siba"
+
+#: .\env\Lib\site-packages\django\forms\models.py:901
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr "Nyamuneka, hindura amakuru y'ikurikirane ku %(field)s."
+
+#: .\env\Lib\site-packages\django\forms\models.py:906
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr "Nyamuneka, hindura amakuru y'ikurikirane ku %(field)s, agomba kuba yihariye."
+
+#: .\env\Lib\site-packages\django\forms\models.py:913
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+"Nyamuneka, hindura amakuru y'ikurikirane ku %(field_name)s, agomba kuba yihariye "
+"ku %(lookup)s muri %(date_field)s."
+
+#: .\env\Lib\site-packages\django\forms\models.py:922
+msgid "Please correct the duplicate values below."
+msgstr "Nyamuneka, hindura agaciro gashyizwe hasi."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1359
+msgid "The inline value did not match the parent instance."
+msgstr "Agaciro ka inline ntikahuye n'ibiri mu parent instance."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1450
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr "Hitamo ikintu kiboneye. Icyo wahisemo nticyemewe."
+
+#: .\env\Lib\site-packages\django\forms\models.py:1594
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr "“%(pk)s” si agaciro karemewe."
+
+#: .\env\Lib\site-packages\django\forms\utils.py:229
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+"%(datetime)s ntishobora gusobanurwa neza muri zone yo mu gihe cya %(current_timezone)s; "
+"bishobora kuba bivuga ibintu bitandukanye cyangwa ntibibaho."
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:527
+msgid "Clear"
+msgstr "Siba"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:528
+msgid "Currently"
+msgstr "Ubu"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:529
+msgid "Change"
+msgstr "Hindura"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:866
+msgid "Unknown"
+msgstr "Ntibizwi"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:867
+msgid "Yes"
+msgstr "Yego"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:868
+msgid "No"
+msgstr "Oya"
+
+# ... and so on for the remaining entries.
