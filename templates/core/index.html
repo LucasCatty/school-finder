@@ -1,15 +1,13 @@
 {% extends 'core/base.html' %}
 {% load static %}
-
 {% load humanize %}
-{% block extrastyle %}
 
-<meta name="description" content="Real estate manager. 
-Offers the best real estate objects and takes care of every aspect for you.
-Services offered: renting, selling, buying, consultation and way more."/>
+{% block extrastyle %}
+<meta name="description" content="School portal – Manage classes, students, subjects, and schedules efficiently. 
+Explore our educational programs, staff directory, announcements, and more." />
 {% endblock %}
 
-{% block title %} | Welcome {% endblock %}
+{% block title %} | School Portal {% endblock %}
 
 {% block content %}
 <!-- Showcase -->
@@ -17,83 +15,75 @@ Services offered: renting, selling, buying, consultation and way more."/>
   <div class="container text-center">
     <div class="home-search p-5">
       <div class="overlay round-corners p-5">
-
-
         <div class="row col-12 pl-0 ml-0">
-
           <div class="col-12 col-lg-8 p-0 text-left">
             <h1 class="display-4 font-weight-bold mb-3">
-              {{ _("Property Searching Just Got So Easy") }}
+              {{ _("Learning Made Accessible for Every Student") }}
             </h1>
-            <p class="lead mb-5">{{ _("We offer extraordinary properties across all price classes.") }}</p>
+            <p class="lead mb-5">{{ _("We offer academic excellence through modern teaching and student-friendly systems.") }}</p>
           </div>
-
           <div class="col-4"></div>
         </div>
-
 
         {% include 'core/partials/_search.html' %}
       </div>
     </div>
   </div>
 </section>
+
 <br>
 <!-- Alerts -->
 {% include 'core/partials/_alerts.html' %}
 
-<!-- Listings -->
+<!-- Class Listings -->
 <section id="listings" class="my-5">
   <div class="container">
     <h2 class="mb-5">
-      {{ _("Latest Listings") }}
+      {{ _("Available Classes & Programs") }}
     </h2>
     <div class="row">
       {% if listings %}
-      {% for listing in listings %}
-      {% include 'listings/_partials/_listing-box.html' %}
-      {% endfor %}
+        {% for listing in listings %}
+          {% include 'listings/_partials/_listing-box.html' %}
+        {% endfor %}
       {% else %}
-      <div class="col-md-12">
-        <p>{{ _("No Listings Available") }}</p>
-      </div>
+        <div class="col-md-12">
+          <p>{{ _("No Classes or Programs Available") }}</p>
+        </div>
       {% endif %}
-
     </div>
   </div>
 </section>
 
+<!-- School Services -->
 <section id="services" class="py-5 bg-secondary text-white">
   <div class="container">
-    <div class="row text-center  bg-blur p-5">
-
+    <div class="row text-center bg-blur p-5">
       <div class="col-12 col-md-6 col-xl-4">
-        <i class="fas fa-comment fa-4x mr-4"></i>
+        <i class="fas fa-book fa-4x mb-3"></i>
         <hr>
-        <h3>{{ _("Buying and Renting") }}</h3>
+        <h3>{{ _("Academic Programs") }}</h3>
         <p>
-          {{ _("We take car of your property. We can support you through the whole selling or renting process.") }}
-          {{ _("We make sure that everything is being taken care of.") }}
+          {{ _("We offer well-structured programs from primary to secondary levels, focusing on quality education and skill development.") }}
         </p>
       </div>
       <div class="col-12 col-md-6 col-xl-4">
-        <i class="fas fa-home fa-4x mr-4"></i>
+        <i class="fas fa-chalkboard-teacher fa-4x mb-3"></i>
         <hr>
-        <h3>{{ _("Propery Management") }}</h3>
+        <h3>{{ _("Qualified Staff") }}</h3>
         <p>
-          {{ _("Property management is the overseeing of residential, commercial and/or industrial real estate, including apartments, detached houses, condominium units, and shopping centers") }}
+          {{ _("Our experienced teachers are dedicated to nurturing students and guiding them to academic success.") }}
         </p>
       </div>
       <div class="col-12 col-md-6 col-xl-4">
-        <i class="fas fa-suitcase fa-4x mr-4"></i>
+        <i class="fas fa-calendar-alt fa-4x mb-3"></i>
         <hr>
-        <h3>{{ _("Renting & Selling") }}</h3>
-        <p>{{ _("Thinking about purchasing an investment property? Real estate has produced many of the world's wealthiest people, so there are plenty of reasons to think that it is a sound investment.") }}</p>
+        <h3>{{ _("Events & Activities") }}</h3>
+        <p>
+          {{ _("We organize school events, competitions, and workshops to build confidence and teamwork among students.") }}
+        </p>
       </div>
     </div>
   </div>
 </section>
-
-
-
-
 {% endblock %}
