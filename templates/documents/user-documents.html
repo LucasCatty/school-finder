@@ -3,8 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block extrastyle %}
-<meta name="description" content="Real estate manager.
-    You can manage your object related documents here." />
+<meta name="description" content="Real estate manager. Manage your object-related documents here." />
 {% endblock %}
 
 {% block title %} | Profile {% endblock %}
@@ -13,11 +12,11 @@
 <section id="showcase-inner" class="py-5 showcase-text">
   <div class="container bg-blur">
     <div class="row">
-      <div class="col-md-12 my-5">
-        <h1 class="display-4 my-5 showcase-text">
-          {{ title }}
+      <div class="col-md-12 my-5 text-center">
+        <h1 class="display-4 my-3 showcase-text">
+          {{ title|default:_("Your Profile") }}
         </h1>
-        <p class="lead">{{ subtitle }}</p>
+        <p class="lead">{{ subtitle|default:_("Manage your documents and settings") }}</p>
       </div>
     </div>
   </div>
@@ -32,9 +31,8 @@
           <a href="{% url 'index' %}">
             <i class="fas fa-home"></i> {{ _("Home") }}</a>
         </li>
-        <li class="breadcrumb-item"> {{ _("Profile") }}</li>
-        <li class="breadcrumb-item active"> {{ _("Documents") }}</li>
-
+        <li class="breadcrumb-item">{{ _("Profile") }}</li>
+        <li class="breadcrumb-item active" aria-current="page">{{ _("Documents") }}</li>
       </ol>
     </nav>
   </div>
@@ -43,12 +41,11 @@
 <!-- Alerts -->
 {% include 'core/partials/_alerts.html' %}
 
+<!-- Profile Dashboard -->
 <section id="dashboard" class="py-4">
   <div class="container">
-
+    <h3 class="mb-4">{{ _("User Navigation") }}</h3>
     {% include 'accounts/_partials/profile-navbar.html' %}
-
-  </div>
   </div>
 </section>
 {% endblock %}
