@@ -1,1 +1,35 @@
 venv
+# Python bytecode files
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+.env/
+
+# SQLite database
+db.sqlite3
+
+# Django static files
+static/
+
+# Django media files (if you have them)
+media/
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Log files
+*.log
+
+# Django migrations (optional, but generally recommended to track migrations)
+*/migrations/
+
+# Temporary or backup files
+*.bak
+*.swp
+*.tmp
