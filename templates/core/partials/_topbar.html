@@ -7,55 +7,66 @@
 {% get_language_info_list for LANGUAGES as languages %}
 
 <!-- Top Bar -->
-<section id="top-bar" class="p-3">
+<section id="top-bar" class="py-2 bg-light border-bottom">
   <div class="container">
-    <div class="row">
+    <div class="row align-items-center">
 
-      <div class="col-md-3">
-        <i class="fas fa-phone"></i> +98(9369295073)
-      </div>
-      <div class="col-md-3">
-        <i class="fas fa-envelope-open"></i> nimadorostkar97@gmail.com
+      <!-- Contact Info -->
+      <div class="col-md-6 col-lg-4 mb-2 mb-md-0 text-md-left">
+        <i class="fas fa-phone-alt text-primary"></i> +98 936 929 5073
+        &nbsp; | &nbsp;
+        <i class="fas fa-envelope text-primary"></i> nimadorostkar97@gmail.com
       </div>
 
-      <div class="col-md-3">
-        <div class="social text-right">
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+      <!-- Social Links -->
+      <div class="col-md-3 text-center">
+        <div class="social-icons">
+          <a href="#" class="mx-1 text-dark"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="mx-1 text-dark"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="mx-1 text-dark"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="mx-1 text-dark"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
 
-      <div class="col-md-3">
-        <div class="text-right">
-          {% for language in languages %}
-            {% if language.code != 'de' %}
-              <a href="#{{ language.code }}" onclick="set_language('{{ language.code }}')" title="{{ language.name_local }}">
-                <span class="flag-icon {% if language.code == 'en' %}flag-icon-gb{% elif language.code == 'rw' %}flag-icon-rw{% else %}flag-icon-{{ language.code }}{% endif %}"></span>
-              </a>
-            {% endif %}
-          {% endfor %}
+      <!-- Language Selector -->
+      <div class="col-md-3 text-md-right text-center">
+        {% for language in languages %}
+          {% if language.code != 'de' %}
+            <a href="#{{ language.code }}"
+               onclick="set_language('{{ language.code }}')"
+               title="{{ language.name_local }}"
+               class="mx-1">
+              <span class="flag-icon 
+                {% if language.code == 'en' %}
+                  flag-icon-gb
+                {% elif language.code == 'rw' %}
+                  flag-icon-rw
+                {% else %}
+                  flag-icon-{{ language.code }}
+                {% endif %}">
+              </span>
+            </a>
+          {% endif %}
+        {% endfor %}
 
-          <form action="{% url 'set_language' %}" method="post" id="setlang">
-            {% csrf_token %}
-            <input name="next" type="hidden" value="{{ request.path }}">
-            <input type="hidden" name="language" id="language">
-          </form>
+        <form action="{% url 'set_language' %}" method="post" id="setlang" class="d-none">
+          {% csrf_token %}
+          <input name="next" type="hidden" value="{{ request.path }}">
+          <input type="hidden" name="language" id="language">
+        </form>
 
-          <script>
-            if (window.location.hash) {
-              const hash = window.location.hash.replace('#', '');
-              document.getElementById('language').value = hash;
-              document.getElementById('setlang').submit();
-            }
+        <script>
+          if (window.location.hash) {
+            const hash = window.location.hash.replace('#', '');
+            document.getElementById('language').value = hash;
+            document.getElementById('setlang').submit();
+          }
 
-            function set_language(language) {
-              document.getElementById('language').value = language;
-              document.getElementById('setlang').submit();
-            }
-          </script>
-        </div>
+          function set_language(language) {
+            document.getElementById('language').value = language;
+            document.getElementById('setlang').submit();
+          }
+        </script>
       </div>
 
     </div>
