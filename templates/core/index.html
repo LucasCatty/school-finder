@@ -3,84 +3,77 @@
 {% load humanize %}
 
 {% block extrastyle %}
-<meta name="description" content="School portal – Manage classes, students, subjects, and schedules efficiently. 
-Explore our educational programs, staff directory, announcements, and more." />
+<meta name="description" content="Efficient school portal to manage classes, students, subjects, and schedules. Explore our programs, staff, announcements, and more." />
 {% endblock %}
 
 {% block title %} | School Portal {% endblock %}
 
 {% block content %}
-<!-- Showcase -->
-<section id="showcase">
+<!-- Showcase Section -->
+<section id="showcase" class="bg-light">
   <div class="container text-center">
     <div class="home-search p-5">
-      <div class="overlay round-corners p-5">
-        <div class="row col-12 pl-0 ml-0">
-          <div class="col-12 col-lg-8 p-0 text-left">
+      <div class="overlay round-corners p-5 shadow">
+        <div class="row">
+          <div class="col-12 col-lg-8 text-left">
             <h1 class="display-4 font-weight-bold mb-3">
-              {{ _("Learning Made Accessible for Every Student") }}
+              {{ _("Empowering Every Student Through Accessible Learning") }}
             </h1>
-            <p class="lead mb-5">{{ _("We offer academic excellence through modern teaching and student-friendly systems.") }}</p>
+            <p class="lead mb-4">
+              {{ _("We combine modern teaching with student-friendly tools to ensure academic success.") }}
+            </p>
           </div>
-          <div class="col-4"></div>
         </div>
-
         {% include 'core/partials/_search.html' %}
       </div>
     </div>
   </div>
 </section>
 
-<br>
 <!-- Alerts -->
 {% include 'core/partials/_alerts.html' %}
 
 <!-- Class Listings -->
 <section id="listings" class="my-5">
   <div class="container">
-    <h2 class="mb-5">
-      {{ _("Available Classes & Programs") }}
-    </h2>
+    <h2 class="mb-4 text-center">{{ _("Available Classes & Programs") }}</h2>
     <div class="row">
       {% if listings %}
         {% for listing in listings %}
           {% include 'listings/_partials/_listing-box.html' %}
         {% endfor %}
       {% else %}
-        <div class="col-md-12">
-          <p>{{ _("No Classes or Programs Available") }}</p>
+        <div class="col-md-12 text-center">
+          <p class="text-muted">{{ _("Currently, no classes or programs are available.") }}</p>
         </div>
       {% endif %}
     </div>
   </div>
 </section>
 
-<!-- School Services -->
+<!-- Services -->
 <section id="services" class="py-5 bg-secondary text-white">
   <div class="container">
-    <div class="row text-center bg-blur p-5">
-      <div class="col-12 col-md-6 col-xl-4">
-        <i class="fas fa-book fa-4x mb-3"></i>
-        <hr>
-        <h3>{{ _("Academic Programs") }}</h3>
+    <div class="row text-center p-4">
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-book fa-3x mb-3"></i>
+        <h4>{{ _("Academic Programs") }}</h4>
         <p>
-          {{ _("We offer well-structured programs from primary to secondary levels, focusing on quality education and skill development.") }}
+          {{ _("From primary to secondary, our structured programs prioritize quality learning and personal growth.") }}
         </p>
       </div>
-      <div class="col-12 col-md-6 col-xl-4">
-        <i class="fas fa-chalkboard-teacher fa-4x mb-3"></i>
-        <hr>
-        <h3>{{ _("Qualified Staff") }}</h3>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-chalkboard-teacher fa-3x mb-3"></i>
+        <h4>{{ _("Qualified Staff") }}</h4>
         <p>
-          {{ _("Our experienced teachers are dedicated to nurturing students and guiding them to academic success.") }}
+          {{ _("Our skilled educators are committed to mentoring students and delivering excellence.") }}
         </p>
       </div>
-      <div class="col-12 col-md-6 col-xl-4">
-        <i class="fas fa-calendar-alt fa-4x mb-3"></i>
-        <hr>
-        <h3>{{ _("Events & Activities") }}</h3>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-calendar-alt fa-3x mb-3"></i>
+        <h4>{{ _("Events & Activities") }}</h4>
         <p>
-          {{ _("We organize school events, competitions, and workshops to build confidence and teamwork among students.") }}
+          {{ _("Engaging events and workshops help build confidence, teamwork, and leadership.") }}
         </p>
       </div>
     </div>
