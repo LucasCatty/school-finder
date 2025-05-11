@@ -1,14 +1,12 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block title %} | Address {% endblock %}
+{% block title %} | School Location {% endblock %}
 
 {% block content %}
 
 {% include 'core/partials/_showcase_section.html' %}
 
-
-<!-- Breadcrumb -->
 <section id="bc" class="mt-3">
   <div class="container">
     <nav aria-label="breadcrumb">
@@ -17,15 +15,13 @@
           <a href="{% url 'index' %}">
             <i class="fas fa-home"></i> {{ _("Home") }}</a>
         </li>
-        <li class="breadcrumb-item"> {{ _("Profile") }}</li>
-        <li class="breadcrumb-item active"> {{ _("Address") }}</li>
-
+        <li class="breadcrumb-item"> {{ _("School") }}</li>
+        <li class="breadcrumb-item active"> {{ _("Location") }}</li>
       </ol>
     </nav>
   </div>
 </section>
 
-<!-- Alerts -->
 {% include 'core/partials/_alerts.html' %}
 
 <section id="dashboard" class="py-4">
@@ -34,7 +30,7 @@
     <div class="pb-3 pt-3">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">{{ _("Address") }}</h5>
+          <h5 class="card-title">{{ _("School Location") }}</h5>
           <hr>
           <form method="POST">
             {% csrf_token %}
@@ -48,13 +44,13 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label>{{ form.street.label }}</label>
-                <div>{{ form.street }}</div>
+                {{ form.street }}
                 <p class="text-danger">{{ form.street.errors }}</p>
               </div>
 
               <div class="form-group col-md-6">
                 <label>{{ form.hn.label }}</label>
-                <div>{{ form.hn }}</div>
+                {{ form.hn }}
                 <p class="text-danger">{{ form.hn.errors }}</p>
               </div>
             </div>
@@ -62,16 +58,17 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label>{{ form.zipcode.label }}</label>
-                <div>{{ form.zipcode }}</div>
+                {{ form.zipcode }}
                 <p class="text-danger">{{ form.zipcode.errors }}</p>
               </div>
 
               <div class="form-group col-md-6">
                 <label>{{ form.city.label }}</label>
-                <div>{{ form.city }}</div>
+                {{ form.city }}
                 <p class="text-danger">{{ form.city.errors }}</p>
               </div>
             </div>
+
             {% include 'core/partials/btn_save_back.html' %}
           </form>
         </div>
