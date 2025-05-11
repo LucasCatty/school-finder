@@ -23,29 +23,34 @@ School-Finder is a Django-based web application designed to help parents, studen
 ## 📦 Setup Instructions
 
 1. **Clone the repo**  
-   `git clone https://github.com/your-username/School-Finder.git`  
-   `cd School-Finder`  
+   git clone https://github.com/your-username/School-Finder.git  
+   cd School-Finder  
 
 2. **Create and activate a virtual environment**  
-   `python -m venv env`  
-   `source env/bin/activate` *(or `env\Scripts\activate` on Windows)*  
+   python -m venv env  
+   source env/bin/activate *(or env\\Scripts\\activate on Windows)*  
 
 3. **Install dependencies**  
-   `pip install -r requirements.txt`  
+   pip install -r requirements.txt  
 
 4. **Run migrations and start the server**  
-   `python manage.py migrate`  
-   `python manage.py runserver`  
+   python manage.py migrate  
+   python manage.py runserver  
 
 5. **Visit the app**  
-   Open your browser and go to: `http://127.0.0.1:8000/`  
+   Open your browser and go to: http://127.0.0.1:8000/  
+
+
+
+### Contributors:
+- **Lucas Cathy Nishimwe** - [GitHub](https://github.com/LucasCatty)
+- **INEZA Ornella** - [GitHub](https://github.com/ornellaIneza)
+- **Orla ophelie** - [GitHub](https://github.com/orlaophelie)
+- **Hirwa Triphine** - [GitHub](https://github.com/uwasehirwatriphine22)
+- **Esperance** - [GitHub](https://github.com/Esperance)
 
 ## 🧑‍💻 Contributing
 
 Feel free to fork this project and contribute! Pull requests are welcome.
 
 
-## 🙋‍♀️ About Me
-
-Made with ❤️ by **Lucas Cathy Nishimwe**  
-[GitHub](https://github.com/LucasCatty)
