@@ -3,18 +3,20 @@
 
 {% block content %}
 
+<!-- Showcase Section -->
 {% include 'core/partials/_showcase_section.html' %}
 
 <!-- Breadcrumb -->
 <section id="bc" class="mt-4 mb-5">
   <div class="container">
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
+      <ol class="breadcrumb bg-white p-2 shadow-sm">
         <li class="breadcrumb-item">
           <a href="{% url 'index' %}" class="text-dark">
-            <i class="fas fa-home"></i> {{ _("Home") }} </a>
+            <i class="fas fa-home"></i> {{ _("Home") }}
+          </a>
         </li>
-        <li class="breadcrumb-item active">{{ _("Contact & Partnership") }}</li>
+        <li class="breadcrumb-item active text-muted" aria-current="page">{{ _("Contact & Partnership") }}</li>
       </ol>
     </nav>
   </div>
@@ -24,75 +26,73 @@
 <section id="about" class="py-5">
   <div class="container">
     <div class="row">
-      <!-- Our Contact -->
-      <div class="col-md-8">
-        <h2 class="pb-3 text-primary font-weight-bold">{{ _("Our Contact") }}</h2>
-        <img src="{% static 'img/contact.jpg' %}" alt="Contact" class="img-fluid rounded shadow-lg mb-4">
-        <p class="mt-4 text-muted font-italic">
-          {{ _("Feel free to reach out to us for any inquiries or partnerships. We are committed to facilitating investments and collaborations with Rwanda investors.") }}
+      <!-- Contact Info -->
+      <div class="col-lg-8 mb-4">
+        <h2 class="text-primary font-weight-bold mb-4">{{ _("Our Contact") }}</h2>
+        <img src="{% static 'img/contact.jpg' %}" alt="Contact Office" class="img-fluid rounded shadow-lg mb-4">
+        <p class="text-muted font-italic">
+          {{ _("Feel free to reach out to us for inquiries or partnerships. We actively promote collaboration with Rwanda's investors.") }}
         </p>
+
         <h4 class="mt-4 text-dark">{{ _("Contact Details") }}</h4>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled text-muted">
           <li><strong>{{ _("Address") }}:</strong> Kigali, Rwanda</li>
           <li><strong>{{ _("Phone") }}:</strong> +250 78 123 4567</li>
           <li><strong>{{ _("Email") }}:</strong> info@yourcompany.rw</li>
         </ul>
       </div>
-      
-      <!-- Our Partnership with Rwanda Investors -->
-      <div class="col-md-4">
-        <div class="mb-4">
-          <h3 class="pb-2 text-primary">{{ _("Our Partnership with Rwanda Investors") }}</h3>
-          <img class="img-fluid rounded shadow-sm pb-3" src="{% static 'img/rw.png' %}" alt="{{ _("Partnership") }}">
-          <p class="text-muted">
-            {{ _("We are proud to collaborate with Rwanda's top investors, including the Rwanda Education Board (REB) and the Higher Education Council (HEC), to promote sustainable development and economic growth. Join us in shaping Rwanda's future!") }}
-          </p>
-        </div>
+
+      <!-- Partnerships -->
+      <div class="col-lg-4">
+        <h3 class="text-primary mb-3">{{ _("Our Partnership with Rwanda Investors") }}</h3>
+        <img src="{% static 'img/rw.png' %}" alt="Partnership with Rwanda" class="img-fluid rounded shadow-sm mb-3">
+        <p class="text-muted">
+          {{ _("We collaborate with key national institutions like REB and HEC to advance education and development. Join us in empowering Rwanda's future.") }}
+        </p>
         <hr>
-        <div>
-          <h4 class="text-dark">{{ _("Our Key Rwanda Investors") }}</h4>
-          <div class="d-flex flex-column align-items-center">
-            <!-- REB Logo and Link -->
-            <a href="https://reb.rw" target="_blank" class="mb-3 text-center">
-              <img src="{% static 'img/REB_logo.PNG' %}" alt="REB Logo" class="img-fluid" style="width:150px; height:auto;">
-              <p class="mt-2 text-dark">{{ _("Rwanda Education Board (REB)") }}</p>
-            </a>
-            <!-- HEC Logo and Link -->
-            <a href="https://hec.gov.rw" target="_blank" class="mb-3 text-center">
-              <img src="{% static 'img/HEC_logo.PNG' %}" alt="HEC Logo" class="img-fluid" style="width:150px; height:auto;">
-              <p class="mt-2 text-dark">{{ _("Higher Education Council (HEC)") }}</p>
-            </a>
-          </div>
+        <h4 class="text-dark mb-3">{{ _("Our Key Rwanda Investors") }}</h4>
+        <div class="d-flex flex-column align-items-center">
+          <a href="https://reb.rw" target="_blank" class="text-center mb-4">
+            <img src="{% static 'img/REB_logo.PNG' %}" alt="REB" class="img-fluid" style="width:150px;">
+            <p class="mt-2 text-dark font-weight-bold">{{ _("Rwanda Education Board (REB)") }}</p>
+          </a>
+          <a href="https://hec.gov.rw" target="_blank" class="text-center">
+            <img src="{% static 'img/HEC_logo.PNG' %}" alt="HEC" class="img-fluid" style="width:150px;">
+            <p class="mt-2 text-dark font-weight-bold">{{ _("Higher Education Council (HEC)") }}</p>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Work -->
+<!-- Call to Action -->
 <section id="work" class="bg-dark text-white text-center py-5">
-  <h2 class="display-4 pb-3">{{ _("We Work For You") }}</h2>
-  <a href="{% url 'listings' %}" class="btn btn-warning text-dark btn-lg px-5 py-3 shadow-lg hover-transition">{{ _("View Our Featured Listings") }}</a>
+  <div class="container">
+    <h2 class="display-4 mb-4">{{ _("We Work For You") }}</h2>
+    <a href="{% url 'listings' %}" class="btn btn-warning text-dark btn-lg px-5 py-3 shadow-lg hover-transition">
+      {{ _("View Our Featured Listings") }}
+    </a>
+  </div>
 </section>
 
+<!-- Team Section -->
 {% if realtors %}
-<!-- Team -->
 <section id="team" class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center pb-5 text-primary font-weight-bold">{{ _("Our Team") }}</h2>
-    <div class="row text-center">
+    <h2 class="text-center text-primary font-weight-bold mb-5">{{ _("Our Team") }}</h2>
+    <div class="row">
       {% for realtor in realtors %}
-      <div class="col-md-4 mb-4">
-        <div class="team-member rounded p-4 shadow-sm">
+      <div class="col-md-4 mb-4 d-flex align-items-stretch">
+        <div class="team-member rounded p-4 shadow-sm text-center w-100">
           <img src="{{ realtor.photo.url }}" alt="{{ realtor.name }}" class="rounded-circle mb-3 img-fluid" style="width:150px; height:150px;">
           <h4 class="text-dark">{{ realtor.name }}</h4>
           <p class="text-success font-weight-bold">
-            <i class="fas fa-award text-success mb-3"></i> {{ _("Realtor") }}</p>
+            <i class="fas fa-award"></i> {{ _("Realtor") }}
+          </p>
           <hr>
-          <p class="text-muted">
-            <i class="fas fa-phone"></i> {{ realtor.phone }}</p>
-          <p class="text-muted">
-            <i class="fas fa-envelope-open"></i> {{ realtor.email }}</p>
+          <p class="text-muted"><i class="fas fa-phone"></i> {{ realtor.phone }}</p>
+          <p class="text-muted"><i class="fas fa-envelope-open"></i> {{ realtor.email }}</p>
         </div>
       </div>
       {% endfor %}
@@ -104,22 +104,21 @@
 {% endblock %}
 
 <style>
-/* Optional: Hover effect for buttons */
+/* Buttons */
 .btn:hover, .btn:focus {
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
 
-/* Hover effect for the special button */
 .hover-transition:hover {
   background-color: #eab308 !important;
   color: #2d2d2d !important;
 }
 
+/* Team Cards */
 .team-member {
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
   transition: transform 0.3s ease;
 }
 
@@ -129,14 +128,12 @@
 
 .team-member img {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
   object-fit: cover;
 }
 
-/* Optional: Image hover effect for badges */
+/* Partnership Section Hover (if needed) */
 #investorsBadgeContainer:hover {
-  opacity: 0.8;
+  opacity: 0.9;
   cursor: pointer;
 }
 </style>
