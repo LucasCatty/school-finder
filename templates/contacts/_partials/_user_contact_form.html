@@ -1,15 +1,27 @@
-<!-- Post to CHAT :: url if user already made an inquiry -->
+<!-- Chat Form: Submit message to chat view -->
 <form action="{% url 'chat' %}" method="POST">
   {% csrf_token %}
 
+  <!-- Hidden fields: user ID and contact ID -->
   <input type="hidden" name="user_id" value="{{ user.id }}">
   <input type="hidden" name="contact_id" value="{{ contact }}">
-  
+
+  <!-- Message Input -->
   <div class="form-group">
     <label for="message" class="col-form-label">{{ _("Message") }}:</label>
-    <textarea name="message" rows="4" class="form-control" placeholder='{{ _("Please enter message here...") }}' required></textarea>
+    <textarea 
+      id="message"
+      name="message"
+      rows="4"
+      class="form-control"
+      placeholder="{{ _('Please enter message here...') }}"
+      required
+    ></textarea>
   </div>
 
-  <input type="submit" value='{{ _("Send message") }}' class="btn btn-block btn-secondary mb-2">
-    <a class="btn btn-primary btn-block" href="{% url 'chat-history' contact %}">{{ _("View history") }}</a>
+  <!-- Submit and View History Buttons -->
+  <input type="submit" value="{{ _('Send message') }}" class="btn btn-secondary btn-block mb-2">
+  <a href="{% url 'chat-history' contact %}" class="btn btn-primary btn-block">
+    {{ _('View history') }}
+  </a>
 </form>
