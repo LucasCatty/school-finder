@@ -26,17 +26,13 @@
 </style>
 {% endblock %}
 
-{% block title %} | School Finder Dashboard {% endblock %}
+{% block title %} | {{ _("School Finder Dashboard") }} {% endblock %}
 
 {% block content %}
-<section id="showcase-inner" class="py-5 showcase-text" {style="background: url({% static 'images/school-banner.jpg' %}) no-repeat center center/cover"}>
-  <div class="container bg-blur text-white">
-    <div class="row">
-      <div class="col-md-12 my-5 text-center">
-        <h1 class="display-4 my-4">{{ _("Welcome to School Finder") }}</h1>
-        <p class="lead">{{ _("Discover and manage schools you've contacted or inquired about") }}</p>
-      </div>
-    </div>
+<section id="showcase-inner" class="py-5 showcase-text" style="background: url('{% static 'images/school-banner.jpg' %}') no-repeat center center / cover;">
+  <div class="container bg-blur text-white text-center my-5">
+    <h1 class="display-4 my-4">{{ _("Welcome to School Finder") }}</h1>
+    <p class="lead">{{ _("Discover and manage schools you've contacted or inquired about") }}</p>
   </div>
 </section>
 
@@ -47,9 +43,10 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="{% url 'index' %}">
-            <i class="fas fa-home"></i> {{ _("Home") }}</a>
+            <i class="fas fa-home"></i> {{ _("Home") }}
+          </a>
         </li>
-        <li class="breadcrumb-item active">{{ _("Dashboard") }}</li>
+        <li class="breadcrumb-item active" aria-current="page">{{ _("Dashboard") }}</li>
       </ol>
     </nav>
   </div>
@@ -68,49 +65,48 @@
         </div>
 
         {% if contacts %}
-        <table class="table table-hover">
-          <thead class="thead-light">
-            <tr>
-              <th>{{ _("School Name") }}</th>
-              <th>{{ _("Inquiry Date") }}</th>
-              <th>{{ _("Actions") }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for contact in contacts %}
-            <tr>
-              <td>{{ contact.listing }}</td>
-              <td>{{ contact.contact_date|date:"d M Y" }}</td>
-              <td>
-                <div class="row col-12 px-0">
-                  <div class="col-12 col-md-6 col-lg-4 mb-1">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead class="thead-light">
+              <tr>
+                <th>{{ _("School Name") }}</th>
+                <th>{{ _("Inquiry Date") }}</th>
+                <th>{{ _("Actions") }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for contact in contacts %}
+              <tr>
+                <td>{{ contact.listing }}</td>
+                <td>{{ contact.contact_date|date:"d M Y" }}</td>
+                <td>
+                  <div class="row gx-2 gy-2">
                     {% if contact.can_access_documents %}
-                    <a class="btn btn-school btn-block" href="{% url 'documents' contact.listing.id %}">
-                      <i class="fas fa-file-alt"></i>
-                      {{ _("Brochure") }}
-                      ({{ contact.listing.id|get_nr_docs }})</a>
+                    <div class="col-12 col-md-4">
+                      <a class="btn btn-school btn-block w-100" href="{% url 'documents' contact.listing.id %}">
+                        <i class="fas fa-file-alt"></i> {{ _("Brochure") }} ({{ contact.listing.id|get_nr_docs }})
+                      </a>
+                    </div>
+                    {% endif %}
+                    <div class="col-12 col-md-4">
+                      <a class="btn btn-school-outline btn-block w-100" href="{% url 'listing' contact.listing_id %}">
+                        <i class="fas fa-school"></i> {{ _("School Profile") }}
+                      </a>
+                    </div>
+                    {% if contact.chatmessage_set.count %}
+                    <div class="col-12 col-md-4">
+                      <a class="btn btn-secondary btn-block w-100" href="{% url 'chat-history' contact.id %}">
+                        <i class="fas fa-comments"></i> {{ _("Messages") }}
+                      </a>
+                    </div>
                     {% endif %}
                   </div>
-                  <div class="col-12 col-md-6 col-lg-4 mb-1">
-                    <a class="btn btn-school-outline btn-block" href="{% url 'listing' contact.listing_id %}">
-                      <i class="fas fa-school"></i>
-                      {{ _("School Profile") }}
-                    </a>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-4 mb-1">
-                    {% if contact.chatmessage_set.all.count > 0 %}
-                    <a class="btn btn-secondary btn-block" href="{% url 'chat-history' contact.id %}">
-                      <i class="fas fa-comments"></i>
-                      {{ _("Messages") }}
-                    </a>
-                    {% endif %}
-                  </div>
-                </div>
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
         {% else %}
         <p class="text-muted">{{ _("You have not made any school inquiries yet.") }}</p>
         {% endif %}
